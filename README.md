@@ -31,11 +31,21 @@ print(lib.resume(coro))
 
 # API
 
-#CoRoutine.create(function, resume, resume_args)
+# CoRoutine.create(function, resume, resume_args)
 Just creates a new coroutine and resumes if true.
+```lua
+local lib = require "CoRoutine"
+lcoal coro = lib.create(function(a) print(a) end, true, 256)
+```
 
-#CoRoutine.status(CoRoutine)
+# CoRoutine.status(CoRoutine)
 Returns status of CoRoutine object.
+```lua
+print(lib.status(coro))
+```
 
-#CoRoutine.resume(CoRoutine, args)
+# CoRoutine.resume(CoRoutine, args)
 Returns resume result of CoRoutine object.
+```lua
+print(lib.resume(coro, {1})
+```
